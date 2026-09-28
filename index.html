@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacidad Digital</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+    linear-gradient(180deg,#7de8ff,#b8ffcc);
+    color:#16445c;
+    overflow-x:hidden;
+}
+
+/* Burbujas estilo Frutiger Aero */
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    box-shadow:0 0 30px white;
+    animation:float 8s infinite ease-in-out;
+}
+
+.b1{
+    width:150px;
+    height:150px;
+    top:30px;
+    left:10%;
+}
+
+.b2{
+    width:220px;
+    height:220px;
+    right:5%;
+    top:200px;
+}
+
+.b3{
+    width:90px;
+    height:90px;
+    left:40%;
+    bottom:50px;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-30px);
+    }
+}
+
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:45px;
+    color:#0878a8;
+    text-shadow:2px 3px 5px white;
+}
+
+header p{
+    font-size:18px;
+}
+
+
+/* Tarjetas */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+    padding:25px;
+
+    margin:25px 0;
+
+    box-shadow:
+    0 10px 25px rgba(0,120,150,.25),
+    inset 0 0 20px white;
+
+    border:2px solid rgba(255,255,255,.7);
+
+    transition:.3s;
+}
+
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+
+h2{
+    color:#0878a8;
+    margin-bottom:15px;
+}
+
+
+ul{
+    margin-left:20px;
+}
+
+li{
+    margin:10px;
+}
+
+
+/* Derechos ARCO */
+.arco{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+
+}
+
+
+.box{
+
+background:linear-gradient(
+135deg,#ffffff,#bdf7ff);
+
+padding:20px;
+border-radius:20px;
+
+box-shadow:0 5px 15px #8dd;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.box:hover{
+transform:scale(1.05);
+}
+
+
+footer{
+
+text-align:center;
+padding:30px;
+
+color:#07506d;
+
+}
+
+
+/* Botón */
+button{
+
+background:#00aeea;
+border:none;
+color:white;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+font-size:16px;
+
+cursor:pointer;
+
+box-shadow:0 5px 15px #078;
+
+}
+
+button:hover{
+background:#007ca8;
+}
+
+
+#mensaje{
+
+margin-top:15px;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+
+
+<header>
+
+<h1>🌎 Privacidad Digital</h1>
+
+<p>
+Protege tu información personal y controla tu huella digital
+</p>
+
+</header>
+
+
+
+<div class="container">
+
+
+<section class="card">
+
+<h2>¿Cuál es el problema?</h2>
+
+<p>
+En internet nuestra información personal puede quedar expuesta
+constantemente. Datos como ubicación, fotografías, rutinas o información
+personal pueden crear riesgos de seguridad si no se manejan correctamente.
+</p>
+
+<p>
+La investigación muestra que muchos problemas no vienen de fallas de las
+aplicaciones, sino de nuestros propios hábitos digitales.
+</p>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>🖥️ La huella digital</h2>
+
+<p>
+Cada publicación, comentario, fotografía o dato compartido en internet
+forma una huella digital que puede permanecer disponible y ser rastreada.
+</p>
+
+<ul>
+<li>Compartir ubicación en tiempo real.</li>
+<li>Aceptar personas desconocidas.</li>
+<li>Publicar información personal sin pensar.</li>
+<li>Aceptar permisos excesivos.</li>
+</ul>
+
+</section>
+
+
+
+<section class="card">
+
+<h2>⚠️ Riesgos principales</h2>
+
+<ul>
+
+<li>Suplantación de identidad.</li>
+
+<li>Fraudes digitales.</li>
+
+<li>Acoso o intimidación.</li>
+
+<li>Mal uso de información personal.</li>
+
+</ul>
+
+</section>
+
+
+
+
+<section class="card">
+
+<h2>🔐 Derechos ARCO</h2>
+
+<p>
+Estos derechos permiten proteger nuestros datos personales:
+</p>
+
+
+<div class="arco">
+
+<div class="box" onclick="mostrar('Acceso: saber qué datos tienen de ti y cómo los usan.')">
+<b>A - Acceso</b>
+</div>
+
+
+<div class="box" onclick="mostrar('Rectificación: corregir información incorrecta o desactualizada.')">
+<b>R - Rectificación</b>
+</div>
+
+
+<div class="box" onclick="mostrar('Cancelación: solicitar que eliminen tus datos cuando corresponda.')">
+<b>C - Cancelación</b>
+</div>
+
+
+<div class="box" onclick="mostrar('Oposición: negarte a ciertos usos de tus datos.')">
+<b>O - Oposición</b>
+</div>
+
+
+</div>
+
+
+<p id="mensaje"></p>
+
+
+</section>
+
+
+
+
+
+<section class="card">
+
+<h2>✅ Consejos para cuidarte</h2>
+
+
+<ul>
+
+<li>Configura tus redes sociales como privadas.</li>
+
+<li>No publiques información sensible.</li>
+
+<li>Lee permisos y términos antes de aceptar.</li>
+
+<li>Piensa antes de compartir algo.</li>
+
+<li>Protege tu identidad digital.</li>
+
+</ul>
+
+
+<button onclick="consejo()">
+Obtener consejo
+</button>
+
+
+<p id="consejo"></p>
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+<footer>
+
+Proyecto sobre privacidad de datos personales en internet
+
+</footer>
+
+
+
+
+<script>
+
+
+function mostrar(texto){
+
+document.getElementById("mensaje").innerHTML=texto;
+
+}
+
+
+
+function consejo(){
+
+let consejos=[
+
+"Antes de publicar algo, piensa quién podría verlo.",
+
+"Tu información personal también es parte de tu seguridad.",
+
+"Menos información pública significa menos riesgos.",
+
+"Revisa los permisos de tus aplicaciones."
+
+];
+
+
+let numero=Math.floor(Math.random()*consejos.length);
+
+
+document.getElementById("consejo").innerHTML=
+"💡 "+consejos[numero];
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
